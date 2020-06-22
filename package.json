@@ -1,0 +1,11 @@
+{
+  "name": "b2",
+  "version": "1.0.0",
+  "description": "remake",
+  "main": "server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test&& jasmine"
+  },
+  "author": "Tim",
+  "license": "ISC"
+}
