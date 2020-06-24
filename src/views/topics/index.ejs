@@ -8,6 +8,13 @@
     <% include ../static/partials/navbar.ejs %>
 
       <h2>Topics Go Here</h2>
+        <ul class="list-group">
+          <% topics.forEach((topic) => { %>
+            <li class="list-group-item">
+             <a href="/topics/<%= topic.id %>"> <%= topic.title %> </a>
+            </li>
+          <% }) %>
+        </ul>
 
     <% include ../static/partials/baseScripts.ejs %>
   </body>

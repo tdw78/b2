@@ -5,8 +5,7 @@
     "database": "bloccit-devv",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "logging": false,
-    "operatorsAliases": false
+    "logging": false
   },
   "test": {
     "username": "postgres",
@@ -14,8 +13,7 @@
     "database": "bloccit-testt",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "logging": false,
-    "operatorsAliases": false
+    "logging": false
   },
   "production": {
     "username": "root",
