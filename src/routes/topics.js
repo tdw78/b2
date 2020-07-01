@@ -8,5 +8,7 @@ router.get("/topics", topicController.index);
 
 router.get('/topics/new', topicController.new);
 router.post("/topics/create", urlBodyParser, topicController.create);
+router.get("/topics/:id", urlBodyParser, topicController.show);
+
 
 module.exports = router;

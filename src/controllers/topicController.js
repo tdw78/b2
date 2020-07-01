@@ -16,6 +16,7 @@ new(req, res, next){
 },
 
 create(req, res, next){
+  console.log(req.body)
   let newTopic = {
     title: req.body.title,
     description: req.body.description
@@ -27,6 +28,15 @@ create(req, res, next){
       res.redirect(303, `/topics/${topic.id}`);
     }
   });
+},
+show(req, res, next){
+  topicQueries.findTopic(req.params.id, (err, topic) => {
+    if(err || topic == null) {
+      res.redirect(404, "/");
+    } else {
+      res.render("topics/show", {topic})
+    }
+  })
 }
 
 
