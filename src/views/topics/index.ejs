@@ -6,8 +6,10 @@
 
   <body>
     <% include ../static/partials/navbar.ejs %>
-
-      <h2>Topics Go Here</h2>
+      <h2>Here are the Topics</h2>
+      <br></br>
+      <a href="/topics/new" class="btn btn-primary">New Topic</a>
+      <br></br>
         <ul class="list-group">
           <% topics.forEach((topic) => { %>
             <li class="list-group-item">
