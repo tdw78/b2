@@ -37,6 +37,33 @@ show(req, res, next){
       res.render("topics/show", {topic})
     }
   })
+},
+edit(req, res, next){
+  topicQueries.findTopic(req.params.id, (err, topic) => {
+    if(err || topic == null){
+      res.redirect(404, "/");
+    } else {
+      res.render("topics/edit", {topic});
+    }
+  })
+},
+update(req, res, next){
+  topicQueries.updateTopic(req, req.body, (err, topic) => {
+    if(err || topic == null){
+      res.redirect(404, `/topics/${topic.id}/edit`);
+    } else {
+      res.redirect(303, `/topics/${topic.id}`);
+    }
+  })
+},
+delete(req, res, next){
+  topicQueries.destroy(req.params.id, (err, topic) => {
+    if(err){
+      res.redirect(404, `/topics/edit/${topic.id}`)
+    } else {
+      res.redirect(303, "/topics");
+    }
+  })
 }
 
 

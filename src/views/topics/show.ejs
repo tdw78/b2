@@ -9,10 +9,15 @@
     <main class="container">
 
       <h1><%= topic.title %></h1>
-        <div>
 
+        <form action="/topics/edit/<%= topic.id %>" method="GET">
+          <button class="btn btn-success">Edit</button>
+        </form>
+        <form action="/topics/delete/<%= topic.id %>" method="POST">
+          <button class="btn btn-danger">Delete</button>
+        </form>
+        <div>
           <p><%= topic.description %></p>
-        
         </div>
   
 
