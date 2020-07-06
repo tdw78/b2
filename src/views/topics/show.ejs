@@ -16,6 +16,9 @@
         <form action="/topics/delete/<%= topic.id %>" method="POST">
           <button class="btn btn-danger">Delete</button>
         </form>
+        <form action="/posts" method="GET">
+          <button class="btn btn-danger">Add a Post</button>
+        </form>
         <div>
           <p><%= topic.description %></p>
         </div>
